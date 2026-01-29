@@ -49,7 +49,8 @@ export function HomePage() {
           title: mainArticle.title,
           excerpt: mainArticle.excerpt,
           readTime: mainArticle.readTime,
-          views: mainArticle.views
+          views: mainArticle.views,
+          slug: mainArticle.slug
         }} trendingArticles={trendingArticles} />
       </section>
 
