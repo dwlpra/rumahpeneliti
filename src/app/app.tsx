@@ -31,6 +31,24 @@ function App() {
       image: 'https://images.unsplash.com/photo-1523582407565-efee5cf4a353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMG1lbnRhbCUyMGhlYWx0aCUyMGRpc2N1c3Npb258ZW58MXx8fHwxNzY5NjYwNDY5fDA&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Kesehatan',
       readTime: '7 menit'
+    },
+    {
+      title: 'Opini: Mengapa Open Science Adalah Masa Depan Penelitian?',
+      image: 'https://images.unsplash.com/photo-1756858488754-7c0b23e1e6b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcGVuJTIwc2NpZW5jZSUyMHJlc2VhcmNoJTIwcHVibGlzaGluZ3xlbnwxfHx8MTc2OTY2MDQ3OHww&ixlib=rb-4.1.0&q=80&w=1080',
+      category: 'Opini',
+      readTime: '6 menit'
+    },
+    {
+      title: 'Beasiswa LPDP 2025: Panduan Lengkap Menulis Essay Rencana Studi',
+      image: 'https://images.unsplash.com/photo-1758270705377-0c86e1b7c0c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3cml0aW5nJTIwZXNzYXklMjBzY2hvbGFyc2hpcHxlbnwxfHx8MTc2OTY2MDQ3OXww&ixlib=rb-4.1.0&q=80&w=1080',
+      category: 'Beasiswa',
+      readTime: '10 menit'
+    },
+    {
+      title: 'Wawancara Eksklusif: Perjalanan Peneliti Indonesia ke NASA',
+      image: 'https://images.unsplash.com/photo-1756858489140-6f9f8d8e8f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMHJlc2VhcmNoJTIwbGFivc3VpdG9yeXxlbnwxfHx8MTc2OTY2MDQ4MHww&ixlib=rb-4.1.0&q=80&w=1080',
+      category: 'Inspirasi',
+      readTime: '12 menit'
     }
   ];
 

@@ -1,6 +1,7 @@
 import { Badge } from '@/app/components/ui/badge';
-import { ArrowRight, TrendingUp, Clock, Eye } from 'lucide-react';
+import { ArrowRight, Clock, Eye } from 'lucide-react';
 import { motion } from 'motion/react';
+import { TrendingCarousel } from '@/app/components/TrendingCarousel';
 
 interface HeroSectionProps {
   mainArticle: {
@@ -114,59 +115,8 @@ export function HeroSection({ mainArticle, trendingArticles }: HeroSectionProps)
           </div>
         </motion.div>
 
-        {/* Trending Articles */}
-        <div className="space-y-3 sm:space-y-4">
-          <div className="flex items-center justify-between mb-2 sm:mb-4">
-            <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-blue-900" />
-              <span className="hidden sm:inline">Trending Minggu Ini</span>
-              <span className="sm:hidden">Trending</span>
-            </h2>
-            <a href="#" className="text-xs sm:text-sm text-blue-900 hover:text-blue-700 font-medium">
-              Lihat Semua
-            </a>
-          </div>
-
-          {trendingArticles.map((article, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 + index * 0.1 }}
-              className="group cursor-pointer bg-white rounded-xl lg:rounded-2xl border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 overflow-hidden"
-            >
-              <div className="relative h-32 sm:h-36 md:h-40 lg:h-44 overflow-hidden">
-                <motion.img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                />
-                {article.category && (
-                  <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
-                    <Badge className="bg-blue-900/90 text-white hover:bg-blue-800 text-[10px] sm:text-xs px-2 py-1">
-                      {article.category}
-                    </Badge>
-                  </div>
-                )}
-              </div>
-
-              <div className="p-3 sm:p-4">
-                <h3 className="text-sm sm:text-base font-bold text-gray-900 group-hover:text-blue-900 transition-colors leading-snug mb-2 line-clamp-2 sm:line-clamp-3">
-                  {article.title}
-                </h3>
-
-                {article.readTime && (
-                  <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
-                    <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>{article.readTime}</span>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Trending Carousel */}
+        <TrendingCarousel articles={trendingArticles} />
       </div>
     </section>
   );
