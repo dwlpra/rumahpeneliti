@@ -22,31 +22,31 @@ function App() {
   const trendingArticles = [
     {
       title: '5 Tools AI Etis untuk Membantu Literature Review Tesis Anda',
-      image: 'https://images.unsplash.com/photo-1753613648109-791ed9c85b82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHJlc2VhcmNoZXIlMjB0ZWNobm9sb2d5JTIwbGFwdG9wfGVufDF8fHx8MTc2OTY2MDQ2OXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1766297248122-5957c51b1f7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHBlb3BsZSUyMHJlc2VhcmNoJTIwbGFib3JhdG9yeXxlbnwxfHx8fDE3Njk2NjA0Njl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Tips Akademik',
       readTime: '5 menit'
     },
     {
-      title: 'Riset Terbaru: Dampak Media Sosial pada Kesehatan Mental Gen Z di Jakarta',
-      image: 'https://images.unsplash.com/photo-1523582407565-efee5cf4a353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMG1lbnRhbCUyMGhlYWx0aCUyMGRpc2N1c3Npb258ZW58MXx8fHwxNzY5NjYwNDY5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      title: 'Riset Terbaru: Dampak Media Sosial pada Kesehatan Mental Gen Z',
+      image: 'https://images.unsplash.com/photo-1758270704840-0ac001215b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwc3R1ZGVudHMlMjBkaXNjdXNzaW5nJTIwY2FtcHVzJTIwY29sbGFib3JhdGlvbnxlbnwxfHx8fDE3Njk2NjA0Njh8MA&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Kesehatan',
       readTime: '7 menit'
     },
     {
       title: 'Opini: Mengapa Open Science Adalah Masa Depan Penelitian?',
-      image: 'https://images.unsplash.com/photo-1756858488754-7c0b23e1e6b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcGVuJTIwc2NpZW5jZSUyMHJlc2VhcmNoJTIwcHVibGlzaGluZ3xlbnwxfHx8MTc2OTY2MDQ3OHww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1758270705290-62b6294dd044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMHRvZ2V0aGVyfGVufDF8fHx8MTc2OTYyMDE1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Opini',
       readTime: '6 menit'
     },
     {
       title: 'Beasiswa LPDP 2025: Panduan Lengkap Menulis Essay Rencana Studi',
-      image: 'https://images.unsplash.com/photo-1758270705377-0c86e1b7c0c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3cml0aW5nJTIwZXNzYXklMjBzY2hvbGFyc2hpcHxlbnwxfHx8MTc2OTY2MDQ3OXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1758685848587-7bc7487b6e85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwcmVzZWFyY2hlciUyMHNjaWVuY2UlMjB0ZWFtfGVufDF8fHx8MTc2OTY2MDQ3MXww&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Beasiswa',
       readTime: '10 menit'
     },
     {
-      title: 'Wawancara Eksklusif: Perjalanan Peneliti Indonesia ke NASA',
-      image: 'https://images.unsplash.com/photo-1756858489140-6f9f8d8e8f1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMHJlc2VhcmNoJTIwbGFivc3VpdG9yeXxlbnwxfHx8MTc2OTY2MDQ4MHww&ixlib=rb-4.1.0&q=80&w=1080',
+      title: 'Wawancara Eksklusif: Perjalanan Peneliti Indonesia',
+      image: 'https://images.unsplash.com/photo-1758685848894-1da9f8c151d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHByb2Zlc3Npb25hbCUyMGFjYWRlbWljJTIwd3JpdGluZ3xlbnwxfHx8fDE3Njk2NjA0NzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
       category: 'Inspirasi',
       readTime: '12 menit'
     }
