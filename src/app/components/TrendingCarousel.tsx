@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Clock, TrendingUp, ChevronLeft, ChevronRight, Dot } from 'lucide-react';
 import { Badge } from '@/app/components/ui/badge';
@@ -10,6 +11,7 @@ interface Article {
   image: string;
   category?: string;
   readTime?: string;
+  slug?: string;
 }
 
 interface TrendingCarouselProps {
@@ -103,13 +105,17 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {articles.map((article, index) => (
-            <motion.div
+            <Link
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
-              className="w-full flex-shrink-0 group cursor-pointer bg-white rounded-xl lg:rounded-2xl border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              to={article.slug ? `/blog/${article.slug}` : '#'}
+              className="w-full flex-shrink-0"
             >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className="group bg-white rounded-xl lg:rounded-2xl border border-gray-100 hover:border-blue-900 hover:shadow-xl transition-all duration-300 overflow-hidden h-full"
+              >
               <div className="relative h-48 sm:h-52 md:h-56 lg:h-64 overflow-hidden">
                 <motion.img
                   src={article.image}
@@ -140,6 +146,7 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
                 )}
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
 

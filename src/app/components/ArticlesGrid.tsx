@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Badge } from '@/app/components/ui/badge';
 import { Clock } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -9,6 +10,7 @@ interface Article {
   title: string;
   excerpt: string;
   readTime: string;
+  slug?: string;
 }
 
 interface ArticlesGridProps {
@@ -49,15 +51,19 @@ export function ArticlesGrid({ articles }: ArticlesGridProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {articles.map((article, index) => (
-          <motion.article
+          <Link
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -5 }}
-            className="group cursor-pointer bg-white rounded-xl border border-gray-200 hover:border-blue-700 hover:shadow-xl transition-all duration-300 overflow-hidden"
+            to={article.slug ? `/blog/${article.slug}` : '#'}
+            className="block"
           >
+            <motion.article
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="group bg-white rounded-xl border border-gray-200 hover:border-blue-700 hover:shadow-xl transition-all duration-300 overflow-hidden h-full"
+            >
             {/* Image */}
             <div className="relative h-48 overflow-hidden bg-gray-100">
               <motion.img
@@ -90,6 +96,7 @@ export function ArticlesGrid({ articles }: ArticlesGridProps) {
               </div>
             </div>
           </motion.article>
+          </Link>
         ))}
       </div>
     </motion.section>

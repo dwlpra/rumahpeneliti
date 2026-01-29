@@ -1,0 +1,702 @@
+[
+  {
+    "id": "ai-kolaborasi",
+    "slug": "kolaborasi-lintas-disiplin-era-ai",
+    "title": "Mengapa Kolaborasi Lintas Disiplin Adalah Kunci Bertahan di Era AI?",
+    "excerpt": "Refleksi mahasiswa pascasarjana tentang pentingnya keluar dari silo keilmuan dan membangun jejaring yang luas.",
+    "image": "https://images.unsplash.com/photo-1758270704840-0ac001215b55?w=1080",
+    "category": "Opini Mahasiswa",
+    "categoryColor": "bg-yellow-600 text-white hover:bg-yellow-700",
+    "author": {
+      "name": "Dr. Sarah Putri",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "role": "Dosen & Peneliti, Universitas Indonesia"
+    },
+    "publishedDate": "25 Januari 2025",
+    "readTime": "6 menit baca",
+    "views": "2.5K",
+    "tags": ["AI", "Kolaborasi", "Riset", "Pascasarjana"],
+    "relatedArticles": ["ai-tools-literature-review", "open-science-masa-depan"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Sebagai mahasiswa pascasarjana yang baru menyelesaikan tahun pertama, saya sering merasa cemas dengan perkembangan pesat teknologi Artificial Intelligence (AI). Pertanyaan yang sering muncul: apakah keahlian saya masih relevan lima tahun ke depan? Apakah riset saya akan digantikan oleh algoritma?"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Apa itu Kolaborasi Lintas Disiplin?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Kolaborasi lintas disiplin adalah pendekatan penelitian yang menggabungkan metode dan perspektif dari berbagai bidang keilmuan untuk memecahkan masalah kompleks. Bukan sekadar multi-disiplin—di mana beberapa disiplin bekerja berdampingan—tetapi benar-benar berintegrasi menciptakan framework baru."
+      },
+      {
+        "type": "quote",
+        "content": "\"Masalah besar dunia tidak bisa diselesaikan oleh satu disiplin ilmu saja. Perubahan iklim, pandemi, ketimpangan sosial—semuanya membutuhkan perspektif dari berbagai sudut pandang.\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Contoh Nyata: AI + Kesehatan"
+      },
+      {
+        "type": "paragraph",
+        "content": "Ambil contoh pengembangan sistem diagnosis berbasis AI. Seorang teman saya di Fakultas Kedokteran bekerja sama dengan departemen Ilmu Komputer dan Fakultas Hukum. Mengapa Hukum? Karena implementasi AI di sektor kesehatan membawa isu etika dan privasi yang kompleks."
+      },
+      {
+        "type": "paragraph",
+        "content": "Hasilnya? Sistem yang tidak hanya akurat secara teknis, tetapi juga mematuhi standar etika medis dan regulasi privasi data. Sesuatu yang tidak mungkin dicapai jika hanya dikerjakan oleh satu disiplin."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Contoh Lain: AI + Ilmu Sosial"
+      },
+      {
+        "type": "paragraph",
+        "content": "Sebagai mahasiswa Sosiologi, saya awalnya pesimis dengan AI. Tapi setelah bergabung dengan proyek riset lintas fakultas, saya menyadari bahwa AI membutuhkan input dari ilmuwan sosial untuk memahami konteks budaya dan dampak sosial."
+      },
+      {
+        "type": "paragraph",
+        "content": "Kami mengembangkan chatbot untuk kesehatan mental remaja. Tanpa input dari psikolog dan sosiolog, chatbot itu mungkin akan memberikan respons yang technically correct tapi socially inappropriate."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Tips Memulai Kolaborasi"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Hadiri seminar dan kuliah tamu di luar departemen Anda",
+          "Join mailing list interdisiplin di kampus",
+          "Ikuti summer school atau workshop lintas bidang",
+          "Jangan takut bertanya 'bodoh'—itulah awal kolaborasi",
+          "Follow researchers dari bidang lain di LinkedIn/Twitter"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Kesimpulan"
+      },
+      {
+        "type": "paragraph",
+        "content": "AI akan menggantikan tugas-tugas rutin, tapi tidak bisa menggantikan kemampuan manusia untuk berkolaborasi, berpikir kritis lintas disiplin, dan memahami konteks sosial-budaya. Itulah nilai tambah kita sebagai peneliti manusia."
+      }
+    ]
+  },
+  {
+    "id": "ai-tools-literature-review",
+    "slug": "5-tools-ai-etis-literature-review",
+    "title": "5 Tools AI Etis untuk Membantu Literature Review Tesis Anda",
+    "excerpt": "Literature review tidak perlu menyita waktu berhari-hari. Tools AI ini bisa membantu, dengan catatan penggunaan etis.",
+    "image": "https://images.unsplash.com/photo-1766297248122-5957c51b1f7c?w=1080",
+    "category": "Tips Akademik",
+    "categoryColor": "bg-teal-600 text-white hover:bg-teal-700",
+    "author": {
+      "name": "Ahmad Fauzi, M.Si",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "role": "Mahasiswa S3, ITB"
+    },
+    "publishedDate": "20 Januari 2025",
+    "readTime": "8 menit baca",
+    "tags": ["AI", "Literature Review", "Tesis", "Tools"],
+    "relatedArticles": ["kolaborasi-lintas-disiplin-era-ai"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Literature review adalah salah satu fase paling melelahkan dalam penulisan tesis. Menghabiskan berjam-jam di Google Scholar, membaca abstract satu per satu, dan mencoba menghubungkan berbagai studi—saya yakin kita semua pernah mengalaminya."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Tantangan Literature Review"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Ribuan paper relevan, waktu terbatas",
+          "Kesulitan menemukan hubungan antar studi",
+          "Bias dalam pemilihan paper",
+          "Tracking metodologi dan temuan lintas paper",
+          "Menyintesis informasi dari berbagai sumber"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "1. Elicit - AI Research Assistant"
+      },
+      {
+        "type": "paragraph",
+        "content": "Elicit adalah tool AI yang dirancang khusus untuk literature review. Anda bisa menanyakan pertanyaan riset dalam bahasa natural, dan Elicit akan mencari paper relevan dari database Semantic Scholar."
+      },
+      {
+        "type": "paragraph",
+        "content": "Fitur unggulan: Otomatis mengekstrak methodology, results, dan conclusions dari setiap paper. Sangat membantu untuk membandingkan berbagai studi dengan cepat."
+      },
+      {
+        "type": "quote",
+        "content": "\"Catatan: Selalu verifikasi informasi yang diberikan AI. Gunakan sebagai assistive tool, bukan pengganti judgment akademik Anda.\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "2. Consensus - Academic Search Engine"
+      },
+      {
+        "type": "paragraph",
+        "content": "Consensus menggunakan AI untuk menganalisis dan mensintesis paper-paper yang relevan. Bedanya dengan Elicit, Consensus fokus pada finding consensus atau disagreement dalam literatur."
+      },
+      {
+        "type": "paragraph",
+        "content": "Misalnya, Anda bertanya \"Apakah intermittent fasting efektif untuk weight loss?\" Consensus akan memberikan jawaban berdasarkan bukti dari berbagai studi, lengkap dengan tingkat confidence-nya."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "3. Scite - Smart Citations"
+      },
+      {
+        "type": "paragraph",
+        "content": "Scite membantu Anda menilai kualitas sebuah paper melalui citation analysis. Bukan sekadar menghitung berapa kali paper tersebut dikutip, tapi bagaimana paper tersebut dikutip."
+      },
+      {
+        "type": "list",
+        "content": [
+          "Supporting citations - yang mendukung klaim",
+          "Contrasting citations - yang membantah",
+          "Mentioning citations - yang sekadar menyebut"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Ini sangat membantu untuk memfilter kualitas sumber Anda."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "4. ResearchRabbit - Spotify untuk Paper"
+      },
+      {
+        "type": "paragraph",
+        "content": "Jika Anda pernah menggunakan Spotify, Anda tahu bagaimana bisa menemukan musik baru berdasarkan apa yang Anda dengar. ResearchRabbit melakukan hal sama untuk paper akademik."
+      },
+      {
+        "type": "paragraph",
+        "content": "Upload satu paper seed, dan ResearchRabbit akan merekomendasikan paper-paper terkait dalam visual network graph. Sangat intuitif dan membantu menemukan studi-studi yang mungkin terlewat dari keyword search tradisional."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "5. Zotero + AI Plugins"
+      },
+      {
+        "type": "paragraph",
+        "content": "Zotero adalah reference manager klasik. Tapi dengan plugins seperti Zotero GPT atau integrasi dengan other AI tools, Anda bisa:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Auto-generate summaries dari koleksi paper Anda",
+          "Tag papers secara otomatis berdasarkan konten",
+          "Generate literature review draft dari notes"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Penggunaan Etis"
+      },
+      {
+        "type": "paragraph",
+        "content": "AI adalah asisten, bukan pengganti. Selalu:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Baca abstract dan conclusion dari paper asli",
+          "Cross-check informasi penting",
+          "Jangan gunakan AI untuk menulis konten baru (plagiarism risk)",
+          "Acknowledge penggunaan AI di metodologi jika perlu"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Dengan pendekatan yang benar, AI bisa menjadi powerful assistant untuk literature review Anda—mempercepat proses tanpa mengorbankan kualitas akademik."
+      }
+    ]
+  },
+  {
+    "id": "dampak-sosmed-mental-health",
+    "slug": "dampak-media-sosial-kesehatan-mental-gen-z",
+    "title": "Riset Terbaru: Dampak Media Sosial pada Kesehatan Mental Gen Z di Jakarta",
+    "excerpt": "Studi kuantitatif menunjukkan korelasi kompleks antara penggunaan media sosial dan kesehatan mental remaja Jakarta.",
+    "image": "https://images.unsplash.com/photo-1758270704840-0ac001215b55?w=1080",
+    "category": "Kesehatan",
+    "categoryColor": "bg-green-600 text-white hover:bg-green-700",
+    "author": {
+      "name": "Dr. Budi Santoso",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "role": "Postdoctoral Researcher, Institut Teknologi Bandung"
+    },
+    "publishedDate": "18 Januari 2025",
+    "readTime": "7 menit baca",
+    "tags": ["Kesehatan Mental", "Media Sosial", "Gen Z", "Riset"],
+    "relatedArticles": ["ai-tools-literature-review"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Sebagai peneliti di bidang psikologi sosial, saya tertarik memahami bagaimana media sosial mempengaruhi kesehatan mental generasi muda Indonesia. Jakarta sebagai kota dengan penetrasi internet tertinggi menjadi lokasi yang menarik untuk studi ini."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Metodologi"
+      },
+      {
+        "type": "paragraph",
+        "content": "Studi ini melibatkan 1.250 responden berusia 15-24 tahun dari 5 wilayah Jakarta, dikumpulkan melalui survei online selama 3 bulan. Menggunakan validated scales untuk mengukur:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Kesejahteraan mental (Warwick-Edinburgh Mental Well-being Scale)",
+          "Gejala anxiety dan depression (GAD-7, PHQ-9)",
+          "Pola penggunaan media sosial (durasi, platform, konten)",
+          "Social comparison tendency"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Temuan Utama"
+      },
+      {
+        "type": "paragraph",
+        "content": "Hasilnya menunjukkan korelasi yang lebih kompleks dari yang diasumsikan sebelumnya:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Durasi penggunaan media sosial TIDAK selalu berkorelasi negatif dengan kesehatan mental",
+          "Konten yang dikonsumsi lebih berpengaruh daripada durasi",
+          "Instagram dan TikTok menunjukkan korelasi negatif lebih kuat daripada YouTube",
+          "Aktivitas pasif (scrolling tanpa interaksi) lebih berdampak negatif daripada aktivitas aktif"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Faktor Perlindungannya"
+      },
+      {
+        "type": "paragraph",
+        "content": "Menariknya, kami menemukan faktor-faktor yang memitigasi dampak negatif:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Digital literacy - kemampuan mengkritisi konten",
+          "Dukungan social offline (family, friends)",
+          "Mindful use - sadar saat menggunakan dan bisa berhenti",
+          "Konten edukatif dan inspiratif dalam feed"
+        ]
+      },
+      {
+        "type": "quote",
+        "content": "\"Gen Z Jakarta bukan pasif korban media sosial. Mereka adalah digital native yang bisa diajak berdialog tentang penggunaan yang lebih sehat.\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Rekomendasi"
+      },
+      {
+        "type": "paragraph",
+        "content": "Berdasarkan temuan ini, kami merekomendasikan:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Edukasi digital literacy di sekolah dan kampus",
+          "Program awareness tentang mindful social media use",
+          "Konten positif dan edukatif perlu didukung (bukan sekadar diblokir)",
+          "Intervensi berbasis komunitas, bukan individu"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Keterbatasan Studi"
+      },
+      {
+        "type": "paragraph",
+        "content": "Studi ini memiliki keterbatasan: self-reported data yang bisa bias, dan cross-sectional design yang tidak bisa menyimpulkan kausalitas. Studi longitudinal diperlukan untuk memahami hubungan sebab-akibat."
+      },
+      {
+        "type": "paragraph",
+        "content": "Namun, findings ini memberikan gambaran awal yang penting untuk desain intervensi kesehatan mental berbasis digital di Indonesia."
+      }
+    ]
+  },
+  {
+    "id": "open-science-masa-depan",
+    "slug": "open-science-masa-depan-penelitian",
+    "title": "Opini: Mengapa Open Science Adalah Masa Depan Penelitian?",
+    "excerpt": "Open science bukan sekadar tren, tapi necessity untuk peneliti Indonesia yang ingin globally competitive.",
+    "image": "https://images.unsplash.com/photo-1758270705290-62b6294dd044?w=1080",
+    "category": "Opini",
+    "categoryColor": "bg-purple-600 text-white hover:bg-purple-700",
+    "author": {
+      "name": "Dr. Sarah Putri",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "role": "Dosen & Peneliti, Universitas Indonesia"
+    },
+    "publishedDate": "15 Januari 2025",
+    "readTime": "6 menit baca",
+    "tags": ["Open Science", "Riset", "Publikasi", "Akademik"],
+    "relatedArticles": ["kolaborasi-lintas-disiplin-era-ai", "beasiswa-lpdp-essay"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Sebagai peneliti muda Indonesia, saya sering merasa frustasi dengan akses ke literatur. Bayangkan: satu paper bisa membutuhkan subscription ratusan dollar, sementara dana riset kita sangat terbatas. Open science adalah solusi dari problema ini—dan jauh lebih dari sekadar free access."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Apa itu Open Science?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Open science adalah movement yang membuat penelitian lebih transparan, accessible, dan collaborative. Ini mencakup:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Open Access - publikasi gratis untuk semua",
+          "Open Data - data riset dibagikan",
+          "Open Source - tools dan software dibagikan",
+          "Open Peer Review - review proses transparan",
+          "Preprints - sharing hasil awal"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Manfaat untuk Peneliti Indonesia"
+      },
+      {
+        "type": "paragraph",
+        "content": "Open science sangat relevan untuk konteks Indonesia:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Akses ke literatur tanpa barrier finansial",
+          "Visibility meningkat - open access papers lebih banyak dikutip",
+          "Kolaborasi internasional lebih mudah",
+          "Avoid redundancy - tidak mengulang riset yang sudah dilakukan",
+          "Capacity building - belajar dari data dan methods orang lain"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Tantangan Implementasi"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tentu saja tidak mudah. Tantangan yang saya hadapi:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Pressure untuk publish di 'prestigious' paid journals",
+          "Kekhawatiran data di-stole oleh pihak lain",
+          "Kurangnya awareness dan incentives",
+          "Infrastruktur yang belum memadai"
+        ]
+      },
+      {
+        "type": "quote",
+        "content": "\"Tapi pertanyaannya: apakah kita ingin riset kita dibaca dan berdampak, atau hanya terkubur di paywalled journal?\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Langkah Awal"
+      },
+      {
+        "type": "paragraph",
+        "content": "Bagi peneliti muda yang ingin mulai open science:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Upload preprint ke arXiv/research Square",
+          "Publish di open access journals (banyak yang fee-waived untuk developing countries)",
+          "Share code di GitHub",
+          "Share data di Zenodo (with DOI)",
+          "Join communities seperti Open Science Indonesia"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Call to Action"
+      },
+      {
+        "type": "paragraph",
+        "content": "Open science bukan sekadar idealisme. Ini adalah necessity jika kita ingin penelitian Indonesia globally relevant dan impactful. Mari mulai dari langkah kecil: satu preprint, satu dataset, satu code sharing."
+      }
+    ]
+  },
+  {
+    "id": "beasiswa-lpdp-essay",
+    "slug": "panduan-essay-lpdp-2025",
+    "title": "Beasiswa LPDP 2025: Panduan Lengkap Menulis Essay Rencana Studi",
+    "excerpt": "Essay rencana studi adalah komponen terpenting aplikasi LPDP. Berikut panduan lengkapnya.",
+    "image": "https://images.unsplash.com/photo-1758685848587-7bc7487b6e85?w=1080",
+    "category": "Beasiswa",
+    "categoryColor": "bg-blue-600 text-white hover:bg-blue-700",
+    "author": {
+      "name": "Ahmad Fauzi, M.Si",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "role": "Mahasiswa S3, ITB (Alumni LPDP 2024)"
+    },
+    "publishedDate": "10 Januari 2025",
+    "readTime": "10 menit baca",
+    "tags": ["Beasiswa", "LPDP", "Essay", "S3"],
+    "relatedArticles": ["kolaborasi-lintas-disiplin-era-ai", "open-science-masa-depan"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Sebagai alumni LPDP yang kini sedang S3 di Jepang, saya sering diminta review essay teman-teman. Essay rencana studi adalah komponen paling menentukan dalam seleksi LPDP—bukan IPK, bukan TOEFL, tapi essay ini."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Mengapa Essay Sangat Penting?"
+      },
+      {
+        "type": "paragraph",
+        "content": "LPDP mencari future leaders, bukan sekadar students with good grades. Essay rencana studi menunjukkan:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Visi jangka panjang Anda",
+          "Relevansi studi dengan rencana karir",
+          "Komitmen kembali ke Indonesia",
+          "Leadership potential",
+          "Clarity of thought"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Struktur Essay Rencana Studi"
+      },
+      {
+        "type": "paragraph",
+        "content": "Essay yang baik biasanya mengikuti struktur ini:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Pendahuluan - latar belakang dan motivasi (1 paragraf)",
+          "Rencana Studi - program, universitas, dan alasannya (2-3 paragraf)",
+          "Relevansi dengan Karir - hubungan studi dengan karir (1-2 paragraf)",
+          "Rencana Kontribusi - apa yang akan dilakukan setelah lulus (1-2 paragraf)",
+          "Kesimpulan - re-affirmation (1 paragraf)"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Tips Per Bagian"
+      },
+      {
+        "type": "paragraph",
+        "content": "Pendahuluan: Hook pembaca dengan story personal yang relate dengan study goal. Hindari cliche seperti 'since childhood'."
+      },
+      {
+        "type": "paragraph",
+        "content": "Rencana Studi: Detailkan specific courses, professors, research groups. Jangan hanya menyebut nama universitas—jelaskan WHY that university, WHY that program."
+      },
+      {
+        "type": "paragraph",
+        "content": "Relevansi dengan Karir: Show, don't tell. Gunakan specific examples: 'Setelah belajar X, saya ingin menerapkan Y di Z.'"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rencana Kontribusi: LPDP wants RETURN on investment. Jabarkan konkret apa yang akan Anda lakukan untuk Indonesia."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Contoh Singkat"
+      },
+      {
+        "type": "quote",
+        "content": "\"Setelah menyelesaikan Master in Environmental Engineering di University of Tokyo dengan fokus pada water treatment technology, saya berencana kembali ke Indonesia dan bergabung dengan Balai Besar Teknologi Pengelolaan Limbah B3. Riset saya tentang low-cost biosensor akan diimplementasikan untuk monitoring kualitas air di daerah industri Cikarang, yang sesuai dengan target pemerintah untuk 100% akses air minum aman pada 2030.\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Kesalahan Umum"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Too generic - bisa siapa saja tulis",
+          "Tidak menjelaskan WHY program/universitas spesifik",
+          "Rencana karir tidak jelas atau tidak realistic",
+          "Tidak mention kontribusi ke Indonesia",
+          "Grammar dan structure errors"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Ingat: Essay ini tentang Anda, tapi dari perspektif apa yang bisa Anda offer ke Indonesia. LPDP invests in you, so show the return."
+      }
+    ]
+  },
+  {
+    "id": "biosensor-polutan-air",
+    "slug": "biosensor-deteksi-polutan-air-itb",
+    "title": "Inovasi Terbaru: Mahasiswa ITB Ciptakan Biosensor Deteksi Polusi Air",
+    "excerpt": "Tim mahasiswa ITB mengembangkan biosensor berbasis bakteri untuk mendeteksi logam berat dalam air—murah dan akurat.",
+    "image": "https://images.unsplash.com/photo-1758270705290-62b6294dd044?w=1080",
+    "category": "Sains & Teknologi",
+    "categoryColor": "bg-blue-600 text-white hover:bg-blue-700",
+    "author": {
+      "name": "Dr. Budi Santoso",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "role": "Postdoctoral Researcher, Institut Teknologi Bandung"
+    },
+    "publishedDate": "5 Januari 2025",
+    "readTime": "5 menit baca",
+    "tags": ["Inovasi", "Lingkungan", "ITB", "Teknologi"],
+    "relatedArticles": ["ai-tools-literature-review", "dampak-sosmed-mental-health"],
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Kontaminasi logam berat dalam air minum adalah masalah serius di Indonesia. Metode deteksi konvensional mahal dan membutuhkan lab equipment. Tim mahasiswa ITB mengembangkan solusi: biosensor portable berbasis bakteri."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Latar Belakang Masalah"
+      },
+      {
+        "type": "paragraph",
+        "content": "Menurut data Kementerian Kesehatan, 30% air minum di Indonesia mengandung logam berat melebihi ambang batas. Lead, mercury, dan cadmium adalah kontaminan paling common."
+      },
+      {
+        "type": "paragraph",
+        "content": "Problem: Deteksi membutuhkan AAS atau ICP-MS—alat yang harganya ratusan juta dan operator trained. Tidak feasible untuk monitoring rutin di daerah remote."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Teknologi yang Dikembangkan"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tim menggunakan genetically modified E. coli yang produces fluorescent protein saat exposed ke specific heavy metals."
+      },
+      {
+        "type": "list",
+        "content": [
+          "Bacteria strain: E. coli DH5α with metal-sensitive promoter",
+          "Output: GFP (Green Fluorescent Protein)",
+          "Detection: Portable fluorometer",
+          "Sensitivity: Detects down to 10 ppb (part per billion)"
+        ]
+      },
+      {
+        "type": "quote",
+        "content": "\"Keunggulan: Harga produksi < Rp 500.000 per unit, dibandingkan lab equipment yang harganya > Rp 500 juta.\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Cara Kerja"
+      },
+      {
+        "type": "paragraph",
+        "content": "Sederhana sekali:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Ambil sampel air",
+          "Tambahkan bacteria culture",
+          "Incubate 30 menit",
+          "Masukkan ke portable fluorometer",
+          "Baca intensity fluorescence"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Semakin tinggi kontaminasi logam berat, semakin bright fluorescensenya. Calibrated dengan standard curve untuk kuantifikasi."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Validasi dan Hasil"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tim telah menguji biosensor dengan:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "50 sampel air dari berbagai lokasi (Cikarang, Citarum, air PDAM)",
+          "Comparison dengan AAS sebagai gold standard",
+          "Sensitivity: 94%, Specificity: 89%"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Precision: CV < 10% untuk concentration di atas 50 ppb"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Potensi Aplikasi"
+      },
+      {
+        "type": "paragraph",
+        "content": "Teknologi ini bisa digunakan oleh:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "PDAM untuk routine monitoring",
+          "Puskesmas di daerah rural",
+          "Community groups untuk water testing",
+          "Industrial sites untuk effluent monitoring"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Tim sedang dalam proses patent dan berencana spin-off untuk commercial production."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Penghargaan"
+      },
+      {
+        "type": "paragraph",
+        "content": "Proyek ini memenangkan Gold Medal di International Genetically Engineered Machine (iGEM) Competition 2024 di Paris, serta Best Environmental Project award."
+      }
+    ]
+  }
+]
