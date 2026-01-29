@@ -1,0 +1,9 @@
+name = "rumahpeneliti"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "dist"
+
+# Custom domain configuration
+routes = [
+  { pattern = "rumahpeneliti.com/*", zone_name = "rumahpeneliti.com" },
+  { pattern = "www.rumahpeneliti.com/*", zone_name = "rumahpeneliti.com" }
+]
