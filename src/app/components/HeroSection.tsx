@@ -28,12 +28,12 @@ export function HeroSection({ mainArticle, trendingArticles }: HeroSectionProps)
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
         {/* Main Featured Article */}
-        <Link to={mainArticle.slug ? `/blog/${mainArticle.slug}` : '#'}>
+        <Link to={mainArticle.slug ? `/blog/${mainArticle.slug}` : '#'} className="lg:col-span-2 block">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 group cursor-pointer"
+            className="group cursor-pointer"
           >
             <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500">
             {/* Image */}
