@@ -82,8 +82,10 @@ const statusConfig = {
 
 export function ProgramsShowcase() {
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 sm:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="program" className="bg-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      {/* Subtle pattern background */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1e3a8a 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Header */}
         <motion.div

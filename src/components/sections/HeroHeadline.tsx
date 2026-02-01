@@ -74,34 +74,13 @@ export function HeroHeadline() {
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </PrimaryButton>
             <PrimaryButton
-              href="#kontributor"
+              href="#tentang"
               variant="outline-on-dark"
               size="lg"
               className="w-full sm:w-auto"
             >
               Jadi Kontributor
             </PrimaryButton>
-          </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-10 sm:mt-12 flex flex-wrap justify-center gap-6 sm:gap-8 text-blue-200 text-xs sm:text-sm"
-          >
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full" />
-              <span><strong className="text-white">500+</strong> Artikel Berkualitas</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full" />
-              <span><strong className="text-white">200+</strong> Kontributor Aktif</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full" />
-              <span><strong className="text-white">50+</strong> Institusi Terwakili</span>
-            </div>
           </motion.div>
         </div>
       </div>

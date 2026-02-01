@@ -1,20 +1,76 @@
 'use client'
 
-import { Send, Sparkles, Mail, CheckCircle, Bell } from 'lucide-react'
+import { Send, Sparkles, Mail, CheckCircle, Bell, Loader2 } from 'lucide-react'
 import { PrimaryButton } from '@/components/ui/primary-button'
-import { motion } from 'motion/react'
+import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
+
+// Confetti component
+function Confetti() {
+  const confetti = Array.from({ length: 30 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    delay: Math.random() * 0.5,
+    color: ['#facc15', '#3b82f6', '#22c55e', '#f97316'][Math.floor(Math.random() * 4)]
+  }))
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {confetti.map((c) => (
+        <motion.div
+          key={c.id}
+          className="absolute w-2 h-2 rounded-full"
+          style={{
+            left: `${c.x}%`,
+            backgroundColor: c.color
+          }}
+          initial={{ y: -20, opacity: 0, rotate: 0 }}
+          animate={{
+            y: ['0vh', '100vh'],
+            opacity: [1, 1, 0],
+            rotate: [0, 360, 720]
+          }}
+          transition={{
+            duration: 2 + Math.random(),
+            delay: c.delay,
+            ease: 'easeOut'
+          }}
+        />
+      ))}
+    </div>
+  )
+}
 
 export function CTASection() {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [emailError, setEmailError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) {
-      setSubscribed(true)
-      // In real app, send to API
+
+    // Basic validation
+    if (!email) {
+      setEmailError('Email tidak boleh kosong')
+      return
     }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setEmailError('Format email tidak valid')
+      return
+    }
+
+    setIsSubmitting(true)
+    setEmailError('')
+
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    setSubscribed(true)
+    setIsSubmitting(false)
+    setEmail('')
   }
 
   return (
@@ -76,7 +132,7 @@ export function CTASection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100"
+            className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 relative overflow-hidden"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center">
@@ -92,55 +148,99 @@ export function CTASection() {
               </div>
             </div>
 
-            {!subscribed ? (
-              <>
-                <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  Dapatkan ringkasan artikel terbaik, info beasiswa S2/S3, dan kesempatan kolaborasi langsung di inbox Anda.
-                </p>
+            <AnimatePresence mode="wait">
+              {!subscribed ? (
+                <motion.div
+                  key="form"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="text-sm sm:text-base text-gray-600 mb-4">
+                    Dapatkan ringkasan artikel terbaik, info beasiswa S2/S3, dan kesempatan kolaborasi langsung di inbox Anda.
+                  </p>
 
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="email@anda.com"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 !text-gray-900 placeholder:!text-gray-500 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full px-6 py-3 btn-yellow font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-md hover:shadow-lg"
-                  >
-                    <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Berlangganan Gratis
-                  </button>
-                </form>
+                  <form onSubmit={handleSubmit} className="space-y-3">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value)
+                        setEmailError('')
+                      }}
+                      placeholder="email@anda.com"
+                      className={`w-full px-4 py-3 rounded-xl bg-gray-50 border !text-gray-900 placeholder:!text-gray-500 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all ${
+                        emailError ? 'border-red-500' : 'border-gray-200'
+                      }`}
+                    />
+                    {emailError && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-red-500 text-sm"
+                      >
+                        {emailError}
+                      </motion.p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full px-6 py-3 btn-yellow font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-md hover:shadow-lg disabled:opacity-50"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
+                          Memproses...
+                        </>
+                      ) : (
+                        <>
+                          <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                          Berlangganan Gratis
+                        </>
+                      )}
+                    </button>
+                  </form>
 
-                <div className="mt-4 flex flex-wrap gap-3 text-xs sm:text-sm text-gray-600">
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-yellow-500" />
-                    <span>Gratis selamanya</span>
+                  <div className="mt-4 flex flex-wrap gap-3 text-xs sm:text-sm text-gray-600">
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle className="w-3.5 h-3.5 text-yellow-500" />
+                      <span>Gratis selamanya</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <CheckCircle className="w-3.5 h-3.5 text-yellow-500" />
+                      <span>1 email/minggu</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-yellow-500" />
-                    <span>1 email/minggu</span>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="success"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  className="relative py-8 text-center"
+                >
+                  <Confetti />
+                  <div className="relative z-10 bg-green-500 !text-white rounded-2xl p-6 sm:p-8">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: 'spring' }}
+                      className="flex justify-center mb-4"
+                    >
+                      <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16" />
+                    </motion.div>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                      Terima kasih! 🎉
+                    </h3>
+                    <p className="text-green-50 text-sm sm:text-base">
+                      Anda telah terdaftar. Cek inbox untuk konfirmasi.
+                    </p>
                   </div>
-                </div>
-              </>
-            ) : (
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                className="py-6 text-center"
-              >
-                <div className="bg-green-500 !text-white rounded-xl p-4 flex items-center justify-center gap-2">
-                  <CheckCircle className="w-5 h-5" />
-                  <span className="font-semibold text-sm sm:text-base">
-                    Terima kasih! Anda telah terdaftar.
-                  </span>
-                </div>
-              </motion.div>
-            )}
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             <div className="mt-4 pt-4 border-t border-gray-200 text-center">
               <p className="text-gray-600 text-xs sm:text-sm">

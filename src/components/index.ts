@@ -1,6 +1,7 @@
 // Layout Components
 export { Navbar } from './layout/Navbar'
 export { Footer } from './layout/Footer'
+export { ScrollProgress } from './layout/ScrollProgress'
 
 // UI Components
 export { PrimaryButton } from './ui/primary-button'
@@ -8,6 +9,7 @@ export { PrimaryButton } from './ui/primary-button'
 // Section Components
 export { HeroHeadline } from './sections/HeroHeadline'
 export { HeroSection } from './sections/HeroSection'
+export { Statistics } from './sections/Statistics'
 export { TrendingCarousel } from './sections/TrendingCarousel'
 export { ProgramsShowcase } from './sections/ProgramsShowcase'
 export { EventsSection } from './sections/EventsSection'
@@ -17,7 +19,6 @@ export { RumahJurnalSection } from './sections/RumahJurnalSection'
 export { CTASection } from './sections/CTASection'
 
 // Legacy/Unused (kept for reference)
-export { Statistics } from './sections/Statistics'
 export { ProgramsBanner } from './sections/ProgramsBanner'
 export { Newsletter } from './sections/Newsletter'
 

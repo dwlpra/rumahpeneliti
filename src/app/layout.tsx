@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
-import { Navbar, Footer } from '@/components'
+import { Navbar, Footer, ScrollProgress } from '@/components'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -46,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased bg-gray-50`}>
+        <ScrollProgress />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

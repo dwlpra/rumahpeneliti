@@ -1,6 +1,6 @@
 'use client'
 
-import { Home, Sparkles, Menu, Search, X, BookOpen, Users, GraduationCap } from 'lucide-react'
+import { Home, Sparkles, Menu, Search, X, BookOpen, Users, BarChart3, Calendar, ExternalLink } from 'lucide-react'
 import { PrimaryButton } from '@/components/ui/primary-button'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -10,13 +10,16 @@ interface MenuItem {
   name: string
   href: string
   icon: typeof Home | null
+  external?: boolean
 }
 
 const menuItems: MenuItem[] = [
   { name: 'Beranda', href: '/', icon: Home },
   { name: 'Artikel', href: '/artikel', icon: BookOpen },
-  { name: 'Kontributor', href: '/#kontributor', icon: Users },
-  { name: 'Tentang Kami', href: '/#tentang', icon: null },
+  { name: 'Statistik', href: '/#statistik', icon: BarChart3 },
+  { name: 'Program', href: '/#program', icon: Users },
+  { name: 'Event', href: '/#event', icon: Calendar },
+  { name: 'Rumah Jurnal', href: 'https://jurnal.rumahpeneliti.com', icon: BookOpen, external: true },
 ]
 
 export function Navbar() {
@@ -61,10 +64,12 @@ export function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="px-4 py-2 text-gray-700 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all duration-200 flex items-center gap-2 text-sm font-medium"
                 >
                   {item.icon && <item.icon className="w-4 h-4" />}
                   {item.name}
+                  {item.external && <ExternalLink className="w-3 h-3 opacity-60" />}
                 </Link>
               ))}
             </div>
@@ -83,7 +88,7 @@ export function Navbar() {
 
               {/* CTA Button */}
               <div className="hidden lg:block">
-                <PrimaryButton href="/#kontributor" size="sm">
+                <PrimaryButton href="/#tentang" size="sm">
                   Jadi Kontributor
                 </PrimaryButton>
               </div>
@@ -147,11 +152,15 @@ export function Navbar() {
                     >
                       <Link
                         href={item.href}
-                        className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all"
-                        onClick={() => setMobileMenuOpen(false)}
+                        {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                        className="flex items-center justify-between gap-3 px-4 py-3 text-gray-700 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all"
+                        onClick={() => !item.external && setMobileMenuOpen(false)}
                       >
-                        {item.icon && <item.icon className="w-5 h-5" />}
-                        <span className="font-medium">{item.name}</span>
+                        <div className="flex items-center gap-3">
+                          {item.icon && <item.icon className="w-5 h-5" />}
+                          <span className="font-medium">{item.name}</span>
+                        </div>
+                        {item.external && <ExternalLink className="w-4 h-4 opacity-60" />}
                       </Link>
                     </motion.div>
                   ))}
@@ -161,7 +170,7 @@ export function Navbar() {
                     transition={{ delay: 0.2 }}
                     className="mt-4 px-4"
                   >
-                    <PrimaryButton href="/#kontributor" className="w-full">
+                    <PrimaryButton href="/#tentang" className="w-full">
                       Jadi Kontributor
                     </PrimaryButton>
                   </motion.div>

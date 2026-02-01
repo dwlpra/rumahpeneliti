@@ -3,6 +3,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { motion } from 'motion/react'
 
 export interface PrimaryButtonProps {
   children: React.ReactNode
@@ -14,6 +15,7 @@ export interface PrimaryButtonProps {
   disabled?: boolean
   external?: boolean
   type?: 'button' | 'submit' | 'reset'
+  loading?: boolean
 }
 
 const sizeClasses = {
@@ -38,6 +40,20 @@ const variantClasses = {
   ghost: 'bg-gray-200 !text-gray-700 hover:bg-gray-300'
 }
 
+function ButtonContent({ children, loading }: { children: React.ReactNode; loading?: boolean }) {
+  return (
+    <>
+      {loading ? (
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-current border-t-transparent rounded-full"
+        />
+      ) : children}
+    </>
+  )
+}
+
 export function PrimaryButton({
   children,
   href,
@@ -47,17 +63,33 @@ export function PrimaryButton({
   className,
   disabled = false,
   external = false,
-  type = 'button'
+  type = 'button',
+  loading = false
 }: PrimaryButtonProps) {
   const baseClasses = cn(
-    'inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300',
+    'inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300 relative overflow-hidden group',
     sizeClasses[size],
     variantClasses[variant],
-    disabled && 'opacity-50 cursor-not-allowed',
+    (disabled || loading) && 'opacity-50 cursor-not-allowed',
     className
   )
 
-  if (href) {
+  // Shine effect
+  const shine = (
+    <motion.span
+      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+      initial={false}
+    />
+  )
+
+  const content = (
+    <>
+      {shine}
+      <ButtonContent loading={loading}>{children}</ButtonContent>
+    </>
+  )
+
+  if (href && !loading) {
     if (external) {
       return (
         <a
@@ -66,13 +98,13 @@ export function PrimaryButton({
           rel="noopener noreferrer"
           className={baseClasses}
         >
-          {children}
+          {content}
         </a>
       )
     }
     return (
       <Link href={href} className={baseClasses}>
-        {children}
+        {content}
       </Link>
     )
   }
@@ -81,10 +113,10 @@ export function PrimaryButton({
     <button
       type={type}
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || loading}
       className={baseClasses}
     >
-      {children}
+      {content}
     </button>
   )
 }

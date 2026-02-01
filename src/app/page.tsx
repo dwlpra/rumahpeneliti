@@ -1,9 +1,10 @@
 import {
   HeroHeadline,
   HeroSection,
+  Statistics,
   ProgramsShowcase,
   EventsSection,
-  FeaturedResearchers,
+  // FeaturedResearchers, // TODO: Enable when have team/testimonials
   ArticlesGrid,
   RumahJurnalSection,
   CTASection
@@ -48,27 +49,30 @@ export default function HomePage() {
     <>
       {/* 1. Hero dengan Value Proposition - Hook pertama */}
       <HeroHeadline />
-      
-      {/* 2. Featured Articles - Preview konten berkualitas */}
+
+      {/* 2. Featured Articles - Proof of quality content (active) */}
       <HeroSection mainArticle={heroArticle} trendingArticles={trendingArticles} />
-      
-      {/* 3. Programs Showcase - Apa yang kami tawarkan */}
-      <ProgramsShowcase />
-      
-      {/* 4. Events - Aktivitas & komunitas (FOMO trigger) */}
-      <EventsSection />
-      
-      {/* 5. Featured Researchers - Social proof & testimonial */}
-      <FeaturedResearchers />
-      
-      {/* 6. Latest Articles Grid - Lebih banyak konten */}
+
+      {/* 3. Statistics - Social proof & credibility */}
+      <Statistics />
+
+      {/* 4. Latest Articles Grid - Lebih banyak konten untuk engagement */}
       <ArticlesGrid articles={latestArticles} />
-      
+
+      {/* 5. Programs Showcase - Roadmap coming soon */}
+      <ProgramsShowcase />
+
+      {/* 6. Events - Coming soon */}
+      <EventsSection />
+
       {/* 7. Rumah Jurnal - Sub-platform highlight */}
       <RumahJurnalSection />
-      
+
       {/* 8. CTA & Newsletter - Final conversion */}
       <CTASection />
+
+      {/* TODO: FeaturedResearchers - Enable when have team/testimonials */}
+      {/* <FeaturedResearchers /> */}
     </>
   )
 }

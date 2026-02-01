@@ -79,8 +79,10 @@ const statusConfig = {
 
 export function EventsSection() {
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="event" className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      {/* Subtle pattern */}
+      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #3b82f6 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Header */}
         <motion.div
@@ -175,7 +177,7 @@ export function EventsSection() {
                   <div className="mt-4">
                     <PrimaryButton
                       href="#"
-                      variant={event.status === 'upcoming' ? 'ghost' : 'solid'}
+                      variant={event.status === 'upcoming' ? 'outline' : 'solid'}
                       size="sm"
                     >
                       {event.status === 'upcoming' ? 'Lihat Detail' : 'Daftar Sekarang'}
