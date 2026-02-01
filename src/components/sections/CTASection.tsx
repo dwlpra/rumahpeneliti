@@ -96,7 +96,7 @@ export function CTASection() {
               <Sparkles className="w-7 h-7 sm:w-8 sm:h-8 text-blue-900" />
             </motion.div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight text-gray-900">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 leading-tight text-gray-900">
               Jadilah Bagian dari
               <span className="block bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
                 Gerakan Ini

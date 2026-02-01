@@ -98,7 +98,7 @@ export function ProgramsShowcase() {
           <Badge className="mb-4 bg-blue-100 text-blue-900 hover:bg-blue-200 text-xs sm:text-sm px-4 py-1.5">
             Program & Pelatihan
           </Badge>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
             Akselerasi Karier Peneliti Anda
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">

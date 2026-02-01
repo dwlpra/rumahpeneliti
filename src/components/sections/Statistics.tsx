@@ -108,7 +108,7 @@ export function Statistics() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
             Dukung Perjalanan Riset Anda
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
@@ -136,7 +136,7 @@ export function Statistics() {
               </motion.div>
 
               <motion.div
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2 bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent"
+                className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 sm:mb-2 bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}

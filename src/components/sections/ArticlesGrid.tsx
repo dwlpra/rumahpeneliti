@@ -27,7 +27,7 @@ export function ArticlesGrid({ articles }: ArticlesGridProps) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl font-bold text-gray-900"
+          className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900"
         >
           Terbaru di Rumah Peneliti
         </motion.h2>

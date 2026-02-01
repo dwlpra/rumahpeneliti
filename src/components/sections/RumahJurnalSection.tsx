@@ -68,7 +68,7 @@ export function RumahJurnalSection() {
               </div>
             </motion.div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight" style={{ color: 'white' }}>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 leading-tight" style={{ color: 'white' }}>
               Platform Publikasi Jurnal
               <span className="block bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text mt-2" style={{ color: 'transparent', WebkitBackgroundClip: 'text' }}>
                 Berkualitas Indonesia
@@ -140,7 +140,7 @@ export function RumahJurnalSection() {
                   whileHover={{ y: -5 }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition-all"
                 >
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2 text-yellow-400">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2 text-yellow-400">
                     {stat.value}
                   </div>
                   <div className="text-xs sm:text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>

@@ -26,7 +26,7 @@ export function HeroSection({ mainArticle, trendingArticles }: HeroSectionProps)
           className="flex items-center justify-between mb-6 sm:mb-8"
         >
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Artikel Pilihan
             </h2>
             <p className="text-sm sm:text-base text-gray-600 mt-1">
