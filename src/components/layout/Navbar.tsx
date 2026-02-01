@@ -153,7 +153,7 @@ export function Navbar() {
                       <Link
                         href={item.href}
                         {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                        className="flex items-center justify-between gap-3 px-4 py-3 text-gray-700 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all"
+                        className="flex items-center justify-between gap-3 px-4 py-4 min-h-[44px] text-gray-700 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-all"
                         onClick={() => !item.external && setMobileMenuOpen(false)}
                       >
                         <div className="flex items-center gap-3">

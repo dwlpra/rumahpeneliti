@@ -128,7 +128,7 @@ export function EventsSection() {
                 <div className="flex-1 min-w-0">
                   {/* Status Badge */}
                   <div className="flex items-center gap-2 mb-2">
-                    <Badge className={`${statusConfig[event.status].color} text-white text-[10px] sm:text-xs px-2 py-0.5`}>
+                    <Badge className={`${statusConfig[event.status].color} text-white text-[11px] sm:text-xs px-2 py-0.5`}>
                       {statusConfig[event.status].label}
                     </Badge>
                     {statusConfig[event.status].pulse && (

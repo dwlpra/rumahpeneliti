@@ -120,7 +120,7 @@ export function ProgramsShowcase() {
             >
               {/* Status Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <Badge className={`${statusConfig[program.status].color} ${statusConfig[program.status].textColor} text-[10px] sm:text-xs px-2 py-1 shadow-sm`}>
+                <Badge className={`${statusConfig[program.status].color} ${statusConfig[program.status].textColor} text-[11px] sm:text-xs px-2 py-1 shadow-sm`}>
                   {statusConfig[program.status].label}
                 </Badge>
               </div>

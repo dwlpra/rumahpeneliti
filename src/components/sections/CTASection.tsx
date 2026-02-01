@@ -170,7 +170,7 @@ export function CTASection() {
                         setEmailError('')
                       }}
                       placeholder="email@anda.com"
-                      className={`w-full px-4 py-3 rounded-xl bg-gray-50 border !text-gray-900 placeholder:!text-gray-500 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all ${
+                      className={`w-full px-4 py-4 rounded-xl bg-gray-50 border !text-gray-900 placeholder:!text-gray-500 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all ${
                         emailError ? 'border-red-500' : 'border-gray-200'
                       }`}
                     />
@@ -204,11 +204,11 @@ export function CTASection() {
 
                   <div className="mt-4 flex flex-wrap gap-3 text-xs sm:text-sm text-gray-600">
                     <div className="flex items-center gap-1.5">
-                      <CheckCircle className="w-3.5 h-3.5 text-yellow-500" />
+                      <CheckCircle className="w-4 h-4 text-yellow-500" />
                       <span>Gratis selamanya</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <CheckCircle className="w-3.5 h-3.5 text-yellow-500" />
+                      <CheckCircle className="w-4 h-4 text-yellow-500" />
                       <span>1 email/minggu</span>
                     </div>
                   </div>

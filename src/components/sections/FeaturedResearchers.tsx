@@ -113,7 +113,7 @@ export function FeaturedResearchers() {
                 ))}
               </div>
 
-              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 flex items-center justify-between text-xs sm:text-sm">
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 flex items-center justify-between text-sm sm:text-base">
                 <span className="text-gray-600">
                   <span className="font-semibold text-blue-900">{researcher.articles}</span> artikel
                 </span>

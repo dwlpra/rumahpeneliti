@@ -72,7 +72,7 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors p-3 -m-3"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />

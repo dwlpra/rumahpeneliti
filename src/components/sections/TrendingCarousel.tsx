@@ -152,7 +152,7 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
           <>
             <button
               onClick={goToPrevious}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 hover:bg-white border border-gray-200 hover:border-blue-900 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 hover:opacity-100 focus:opacity-100"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 bg-white/90 hover:bg-white border border-gray-200 hover:border-blue-900 rounded-full flex items-center justify-center shadow-lg transition-all sm:opacity-0 opacity-100 hover:opacity-100 focus:opacity-100"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
@@ -160,7 +160,7 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
 
             <button
               onClick={goToNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 hover:bg-white border border-gray-200 hover:border-blue-900 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 hover:opacity-100 focus:opacity-100"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 bg-white/90 hover:bg-white border border-gray-200 hover:border-blue-900 rounded-full flex items-center justify-center shadow-lg transition-all sm:opacity-0 opacity-100 hover:opacity-100 focus:opacity-100"
               aria-label="Next slide"
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
@@ -180,9 +180,9 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
               aria-label={`Go to slide ${index + 1}`}
             >
               {index === currentIndex ? (
-                <Dot className="w-8 h-8 sm:w-10 sm:h-10 text-blue-900 fill-blue-900" />
+                <Dot className="w-11 h-11 sm:w-10 sm:h-10 text-blue-900 fill-blue-900" />
               ) : (
-                <Dot className="w-8 h-8 sm:w-10 sm:h-10 text-gray-300 hover:text-gray-400" />
+                <Dot className="w-11 h-11 sm:w-10 sm:h-10 text-gray-300 hover:text-gray-400" />
               )}
             </button>
           ))}
