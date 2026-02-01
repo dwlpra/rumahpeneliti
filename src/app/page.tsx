@@ -1,10 +1,11 @@
 import {
+  HeroHeadline,
   HeroSection,
-  Statistics,
-  ProgramsBanner,
+  ProgramsShowcase,
+  EventsSection,
   FeaturedResearchers,
   ArticlesGrid,
-  Newsletter,
+  RumahJurnalSection,
   CTASection
 } from '@/components'
 import { getAllArticles } from '@/lib/articles'
@@ -45,12 +46,28 @@ export default function HomePage() {
 
   return (
     <>
+      {/* 1. Hero dengan Value Proposition - Hook pertama */}
+      <HeroHeadline />
+      
+      {/* 2. Featured Articles - Preview konten berkualitas */}
       <HeroSection mainArticle={heroArticle} trendingArticles={trendingArticles} />
-      <Statistics />
-      <ProgramsBanner />
+      
+      {/* 3. Programs Showcase - Apa yang kami tawarkan */}
+      <ProgramsShowcase />
+      
+      {/* 4. Events - Aktivitas & komunitas (FOMO trigger) */}
+      <EventsSection />
+      
+      {/* 5. Featured Researchers - Social proof & testimonial */}
       <FeaturedResearchers />
+      
+      {/* 6. Latest Articles Grid - Lebih banyak konten */}
       <ArticlesGrid articles={latestArticles} />
-      <Newsletter />
+      
+      {/* 7. Rumah Jurnal - Sub-platform highlight */}
+      <RumahJurnalSection />
+      
+      {/* 8. CTA & Newsletter - Final conversion */}
       <CTASection />
     </>
   )

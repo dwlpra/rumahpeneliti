@@ -129,25 +129,6 @@ export function FeaturedResearchers() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="text-center mt-8 sm:mt-12 px-2"
-        >
-          <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-            Ingin menjadi kontributor dan profil Anda ditampilkan?
-          </p>
-          <Link
-            href="#"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-900 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-800 hover:to-blue-600 transition-all text-sm sm:text-base"
-          >
-            Mulai Menulis
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-        </motion.div>
       </div>
     </section>
   )

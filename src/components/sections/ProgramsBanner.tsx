@@ -20,12 +20,12 @@ const programs: ProgramCard[] = [
   {
     icon: <DollarSign className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: 'Workshop: Strategi Tembus Hibah Riset',
-    iconBg: 'bg-gradient-to-br from-teal-500 to-teal-600'
+    iconBg: 'bg-gradient-to-br from-blue-600 to-blue-700'
   },
   {
     icon: <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: 'Panduan Beasiswa S2/S3 Luar Negeri',
-    iconBg: 'bg-gradient-to-br from-purple-500 to-purple-600'
+    iconBg: 'bg-gradient-to-br from-blue-700 to-blue-800'
   },
   {
     icon: <Users className="w-6 h-6 sm:w-8 sm:h-8" />,
@@ -98,7 +98,7 @@ export function ProgramsBanner() {
               </div>
 
               <motion.div
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}

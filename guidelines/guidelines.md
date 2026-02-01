@@ -7,9 +7,18 @@
 ## 📋 Project Overview
 
 **Nama Proyek:** Rumah Peneliti  
-**Deskripsi:** Platform media digital untuk komunitas peneliti Indonesia  
+**Deskripsi:** Platform ekosistem lengkap untuk peneliti Indonesia - bukan hanya media artikel, tapi multifungsi platform  
 **Bahasa:** Indonesian (Bahasa Indonesia)  
 **Target Audience:** Peneliti muda, mahasiswa pascasarjana, akademisi Indonesia
+
+### Platform Ecosystem
+
+Rumah Peneliti adalah **ekosistem multifungsi** yang terdiri dari:
+
+1. **Content Hub** - Artikel, tips riset, info beasiswa
+2. **Program & Pelatihan** - Bootcamp, workshop, mentorship, webinar
+3. **Event & Community** - Call for papers, seminar, workshop, conference
+4. **Rumah Jurnal** - Platform publikasi jurnal (subdomain: jurnal.rumahpeneliti.com)
 
 ### Tech Stack
 
@@ -53,14 +62,15 @@ src/
 │   ├── index.ts            # Central export (PENTING: selalu export di sini)
 │   ├── layout/             # Layout components (Navbar, Footer)
 │   ├── sections/           # Homepage sections
-│   │   ├── HeroSection.tsx
-│   │   ├── Statistics.tsx
-│   │   ├── ProgramsBanner.tsx
-│   │   ├── FeaturedResearchers.tsx
-│   │   ├── ArticlesGrid.tsx
-│   │   ├── Newsletter.tsx
-│   │   ├── CTASection.tsx
-│   │   └── TrendingCarousel.tsx
+│   │   ├── HeroHeadline.tsx        # Value proposition hero
+│   │   ├── HeroSection.tsx         # Featured articles showcase
+│   │   ├── ProgramsShowcase.tsx    # ⭐ Program & pelatihan
+│   │   ├── EventsSection.tsx       # ⭐ Events & activities
+│   │   ├── FeaturedResearchers.tsx # Testimonials
+│   │   ├── ArticlesGrid.tsx        # Latest articles grid
+│   │   ├── RumahJurnalSection.tsx  # ⭐ Rumah Jurnal highlight
+│   │   ├── CTASection.tsx          # CTA + Newsletter
+│   │   └── TrendingCarousel.tsx    # Carousel component
 │   ├── article/            # Article-specific components
 │   │   └── ArticleDetail.tsx
 │   └── ui/                 # shadcn/ui components (DO NOT MODIFY)
@@ -115,6 +125,8 @@ src/styles/                 # ⭐ ALL STYLING FILES IN ONE PLACE
 │
 └── utilities.css           # Custom utility classes
     ├── Layout              # .container-main, .section-padding
+    ├── Text Colors         # .text-on-dark (ALWAYS white on dark bg)
+    ├── Buttons             # .btn-outline-on-dark (for dark backgrounds)
     ├── Gradients           # .gradient-primary, .gradient-accent
     ├── Text                # .text-gradient-primary
     ├── Interactive         # .card-hover, .focus-ring, .link-underline
@@ -157,6 +169,31 @@ Gunakan CSS custom properties atau Tailwind classes:
 // Via utility classes
 <div className="gradient-primary" />  /* predefined gradient */
 <h1 className="text-gradient-primary" /> /* gradient text */
+
+// ⭐ PENTING: Untuk teks di atas background gelap
+<h1 style={{ color: 'white' }}>Judul</h1>
+// atau gunakan utility class:
+<h1 className="text-on-dark">Judul</h1>
+<button className="btn-outline-on-dark">Tombol</button>
+```
+
+### Dark Background Text Guidelines
+
+**CRITICAL RULE:** Saat membuat komponen dengan background gelap (biru, hitam, gradient gelap), SELALU pastikan teks menggunakan warna putih dengan cara:
+
+```tsx
+// Method 1: Inline style (RECOMMENDED untuk komponen reusable)
+<h1 style={{ color: 'white' }}>Judul</h1>
+<p style={{ color: 'white' }}>Paragraf</p>
+<Link href="#" style={{ color: 'white' }}>Link</Link>
+
+// Method 2: Utility class
+<h1 className="text-on-dark">Judul</h1>
+<p className="text-on-dark-secondary">Paragraf dengan opacity</p>
+<button className="btn-outline-on-dark">Tombol Outline</button>
+
+// ❌ JANGAN hanya gunakan className="text-white" 
+// karena bisa di-override oleh Tailwind atau tidak ter-render
 ```
 
 ### Typography
@@ -487,6 +524,7 @@ import Link from 'next/link'
 - Gunakan Bahasa Indonesia untuk konten UI
 - Gunakan `next/image` untuk semua gambar
 - Gunakan `next/link` untuk semua internal links
+- **PENTING:** Untuk teks di atas background gelap (biru/hitam), gunakan `style={{ color: 'white' }}` inline atau class `.text-on-dark` untuk memastikan teks selalu putih dan terbaca
 
 ### ❌ DON'T
 
@@ -495,9 +533,10 @@ import Link from 'next/link'
 - Jangan hardcode warna - gunakan Tailwind classes
 - Jangan gunakan `<img>` tag biasa
 - Jangan gunakan `<a>` untuk internal links
-- Jangan gunakan inline styles
+- Jangan gunakan inline styles (kecuali untuk enforcing colors pada dark background)
 - Jangan buat komponen UI baru jika sudah ada di shadcn/ui
 - Jangan lupa responsive breakpoints
+- **JANGAN gunakan `text-white` atau `text-gray-900` pada komponen reusable** - gunakan inline style atau utility class `.text-on-dark` untuk memastikan konsistensi
 
 ---
 
@@ -587,6 +626,33 @@ pnpm build  # Check for build errors
 pnpm dev    # Development server at localhost:3000
 ```
 
+### Landing Page UX Flow
+
+Urutan section di homepage dirancang untuk **maksimum engagement**:
+
+```
+1. HeroHeadline          → Hook dengan value proposition
+2. HeroSection           → Preview konten berkualitas (featured articles)
+3. ProgramsShowcase      → Showcase program & pelatihan (value delivery)
+4. EventsSection         → Community activities (FOMO + engagement)
+5. FeaturedResearchers   → Social proof & testimonial
+6. ArticlesGrid          → More content discovery
+7. RumahJurnalSection    → Highlight sub-platform
+8. CTASection            → Final conversion (contribute + newsletter)
+```
+
+**Prinsip UX:**
+- **Hook** → Langsung tunjukkan value proposition
+- **Value** → Tunjukkan apa yang bisa didapat (program, event, content)
+- **Social Proof** → Testimoni researcher yang sudah sukses
+- **Content** → Banyak artikel berkualitas
+- **Conversion** → CTA jelas untuk action
+
+**JANGAN:**
+- Taruh "coming soon" terlalu prominent
+- Redundant social proof (statistik di banyak tempat)
+- CTA terlalu banyak yang membingungkan user
+
 ---
 
 ## 📖 Common Tasks
@@ -597,16 +663,36 @@ pnpm dev    # Development server at localhost:3000
 2. Tambahkan object artikel baru di awal array
 3. Pastikan `id` dan `slug` unik
 
+### Task: Tambah program/pelatihan baru
+
+1. Edit `src/components/sections/ProgramsShowcase.tsx`
+2. Tambahkan object di array `programs`
+3. Set status: `'available' | 'coming-soon' | 'full'`
+
+### Task: Tambah event baru
+
+1. Edit `src/components/sections/EventsSection.tsx`
+2. Tambahkan object di array `events`
+3. Set type: `'call-for-paper' | 'seminar' | 'workshop' | 'webinar'`
+4. Set status: `'open' | 'closing-soon' | 'upcoming'`
+
+### Task: Update Rumah Jurnal stats
+
+1. Edit `src/components/sections/RumahJurnalSection.tsx`
+2. Update array `stats` dengan data terbaru
+
 ### Task: Ubah warna brand
 
-1. Edit color classes di seluruh codebase
-2. Utamakan: blue-900 → [new-primary], yellow-400 → [new-accent]
+1. Edit `src/styles/theme.css` di `@theme` block
+2. Update color tokens: `--color-primary-*`, `--color-accent-*`
+3. Utamakan: blue-900 → [new-primary], yellow-400 → [new-accent]
 
 ### Task: Tambah section baru di homepage
 
 1. Buat file `src/components/sections/NewSection.tsx`
 2. Export di `src/components/index.ts`
 3. Import dan gunakan di `src/app/page.tsx`
+4. Perhatikan UX flow untuk urutan yang optimal
 
 ### Task: Tambah page baru
 

@@ -49,6 +49,46 @@
 }
 
 /* ========================================
+   TEXT COLOR UTILITIES - DARK BACKGROUND
+   ======================================== */
+
+/* Utility untuk teks di atas background gelap - ALWAYS WHITE */
+.text-on-dark {
+  color: white !important;
+}
+
+/* Utility untuk teks di atas background gelap dengan opacity */
+.text-on-dark-secondary {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.text-on-dark-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Button dengan border di dark background - ALWAYS WHITE TEXT */
+.btn-outline-on-dark {
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+
+.btn-outline-on-dark:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Yellow button dengan dark text - untuk dark backgrounds */
+.btn-yellow {
+  background: linear-gradient(to right, var(--color-accent-400), var(--color-accent-500));
+  color: var(--color-primary-900) !important;
+}
+
+.btn-yellow:hover {
+  background: linear-gradient(to right, var(--color-accent-300), var(--color-accent-400));
+}
+
+/* ========================================
    GRADIENT UTILITIES
    ======================================== */
 

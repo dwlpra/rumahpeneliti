@@ -1,7 +1,7 @@
 'use client'
 
 import { Home, Sparkles, Menu, Search, X, BookOpen, Users, GraduationCap } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { PrimaryButton } from '@/components/ui/primary-button'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Link from 'next/link'
@@ -13,9 +13,8 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { name: 'Beranda', href: '/#beranda', icon: Home },
-  { name: 'Artikel', href: '/#artikel', icon: BookOpen },
-  { name: 'Program', href: '/#program', icon: GraduationCap },
+  { name: 'Beranda', href: '/', icon: Home },
+  { name: 'Artikel', href: '/artikel', icon: BookOpen },
   { name: 'Kontributor', href: '/#kontributor', icon: Users },
   { name: 'Tentang Kami', href: '/#tentang', icon: null },
 ]
@@ -84,9 +83,9 @@ export function Navbar() {
 
               {/* CTA Button */}
               <div className="hidden lg:block">
-                <Button className="bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600 text-white shadow-lg hover:shadow-xl transition-all">
+                <PrimaryButton href="/#kontributor" size="sm">
                   Jadi Kontributor
-                </Button>
+                </PrimaryButton>
               </div>
 
               {/* Mobile Menu Button */}
@@ -162,9 +161,9 @@ export function Navbar() {
                     transition={{ delay: 0.2 }}
                     className="mt-4 px-4"
                   >
-                    <Button className="w-full bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600 text-white">
+                    <PrimaryButton href="/#kontributor" className="w-full">
                       Jadi Kontributor
-                    </Button>
+                    </PrimaryButton>
                   </motion.div>
                 </div>
               </motion.div>

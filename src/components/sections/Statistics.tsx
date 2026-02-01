@@ -25,14 +25,14 @@ const statistics: StatCard[] = [
     value: '200+',
     label: 'Kontributor Aktif',
     description: 'Dari berbagai disiplin ilmu',
-    color: 'from-teal-500 to-teal-600'
+    color: 'from-blue-600 to-blue-700'
   },
   {
     icon: <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />,
     value: '50+',
     label: 'Institusi Terwakili',
     description: 'Universitas & lembaga riset',
-    color: 'from-purple-500 to-purple-600'
+    color: 'from-blue-700 to-blue-800'
   },
   {
     icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" />,
