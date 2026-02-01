@@ -12,13 +12,13 @@ install: ## Install dependencies
 dev: ## Start development server
 	pnpm dev
 
-build: ## Build for production
+build: ## Build for production (static export)
 	pnpm build
 
 deploy: build ## Build and deploy to Cloudflare Pages
-	npx wrangler pages deploy dist
+	pnpm wrangler pages deploy dist --commit-dirty=true
 
 clean: ## Clean build output
-	rm -rf dist
+	rm -rf dist .next
 
 deploy-all: clean install deploy ## Clean, install, build and deploy
