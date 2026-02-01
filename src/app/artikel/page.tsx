@@ -6,11 +6,11 @@ import { Badge } from '@/components/ui/badge'
 import { Clock, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Blog & Artikel',
+  title: 'Artikel',
   description: 'Kumpulan artikel, opini, dan tutorial dari para peneliti Indonesia.',
 }
 
-export default function BlogPage() {
+export default function ArtikelPage() {
   const articles = getAllArticles()
   const categories = getAllCategories()
 
@@ -19,7 +19,7 @@ export default function BlogPage() {
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          Blog & Artikel
+          Artikel
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl">
           Temukan artikel terbaru, opini peneliti, dan tutorial untuk mendukung perjalanan riset Anda.
@@ -43,7 +43,7 @@ export default function BlogPage() {
         {articles.map((article) => (
           <Link
             key={article.id}
-            href={`/blog/${article.slug}`}
+            href={`/artikel/${article.slug}`}
             className="group block"
           >
             <article className="bg-white rounded-xl border border-gray-200 hover:border-blue-700 hover:shadow-xl transition-all duration-300 overflow-hidden h-full">

@@ -1,0 +1,336 @@
+/* ============================================
+   RUMAH PENELITI - UTILITY CLASSES
+   ============================================
+   
+   Custom utility classes yang extend Tailwind.
+   Untuk pattern yang sering digunakan.
+   
+   ============================================ */
+
+/* ========================================
+   LAYOUT UTILITIES
+   ======================================== */
+
+/* Main container dengan responsive padding */
+.container-main {
+  width: 100%;
+  max-width: var(--container-7xl);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-main {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-main {
+    padding-inline: 2rem;
+  }
+}
+
+/* Section spacing responsive */
+.section-padding {
+  padding-block: var(--spacing-section-sm);
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-block: var(--spacing-section);
+  }
+}
+
+/* Prose container untuk artikel */
+.container-prose {
+  max-width: var(--container-prose);
+  margin-inline: auto;
+}
+
+/* ========================================
+   GRADIENT UTILITIES
+   ======================================== */
+
+/* Primary gradient - horizontal */
+.gradient-primary {
+  background: linear-gradient(
+    to right,
+    var(--color-primary-900),
+    var(--color-primary-700)
+  );
+}
+
+/* Primary gradient - vertical */
+.gradient-primary-vertical {
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-900),
+    var(--color-primary-700)
+  );
+}
+
+/* Primary gradient - diagonal */
+.gradient-primary-diagonal {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-900),
+    var(--color-primary-700)
+  );
+}
+
+/* Accent gradient */
+.gradient-accent {
+  background: linear-gradient(
+    to right,
+    var(--color-accent-400),
+    var(--color-accent-500)
+  );
+}
+
+/* Overlay gradients untuk images */
+.gradient-overlay-bottom {
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.9),
+    rgb(0 0 0 / 0.5) 50%,
+    transparent
+  );
+}
+
+.gradient-overlay-full {
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.7),
+    rgb(0 0 0 / 0.3)
+  );
+}
+
+/* ========================================
+   TEXT UTILITIES
+   ======================================== */
+
+/* Gradient text */
+.text-gradient-primary {
+  background: linear-gradient(
+    to right,
+    var(--color-primary-900),
+    var(--color-primary-700)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(
+    to right,
+    var(--color-accent-400),
+    var(--color-accent-600)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Text balance untuk headings */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Text pretty untuk paragraphs */
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* ========================================
+   INTERACTIVE UTILITIES
+   ======================================== */
+
+/* Focus ring accessible */
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: 
+    box-shadow var(--duration-base) var(--ease-default),
+    transform var(--duration-base) var(--ease-default);
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Button hover scale */
+.btn-scale {
+  transition: transform var(--duration-fast) var(--ease-default);
+}
+
+.btn-scale:hover {
+  transform: scale(1.02);
+}
+
+.btn-scale:active {
+  transform: scale(0.98);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width var(--duration-base) var(--ease-default);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neutral-400) var(--color-neutral-100);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--color-neutral-100);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-400);
+  border-radius: var(--radius-full);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-500);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   LINE CLAMP UTILITIES
+   ======================================== */
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========================================
+   ANIMATION UTILITIES
+   ======================================== */
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--duration-base) var(--ease-default);
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--duration-slow) var(--ease-out);
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight var(--duration-slow) var(--ease-out);
+}
+
+/* Pulse subtle */
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2s var(--ease-in-out) infinite;
+}

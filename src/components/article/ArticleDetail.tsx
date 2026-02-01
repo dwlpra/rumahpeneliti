@@ -5,12 +5,12 @@ import { Share2, Facebook, Twitter, Linkedin, Link2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import type { Article, ArticleContent } from '@/types/article'
 
-interface BlogDetailProps {
+interface ArticleDetailProps {
   article: Article
   showHeader?: boolean
 }
 
-export function BlogDetail({ article, showHeader = true }: BlogDetailProps) {
+export function ArticleDetail({ article, showHeader = true }: ArticleDetailProps) {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : ''
   const shareTitle = article.title
 

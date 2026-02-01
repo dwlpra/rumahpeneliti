@@ -11,3 +11,6 @@ export { FeaturedResearchers } from './sections/FeaturedResearchers'
 export { ArticlesGrid } from './sections/ArticlesGrid'
 export { Newsletter } from './sections/Newsletter'
 export { CTASection } from './sections/CTASection'
+
+// Article Components
+export { ArticleDetail } from './article/ArticleDetail'

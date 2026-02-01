@@ -1,0 +1,110 @@
+/* ============================================
+   RUMAH PENELITI - GLOBAL STYLES
+   ============================================
+   
+   Entry point untuk semua CSS.
+   Import theme dan utilities dari file terpisah.
+   
+   Struktur:
+   1. Tailwind base
+   2. Theme tokens (colors, typography, spacing, etc)
+   3. Utility classes (custom utilities)
+   4. Base styles (html, body)
+   
+   ============================================ */
+
+/* Tailwind CSS */
+@import "tailwindcss";
+
+/* Theme Configuration - Design Tokens */
+@import "./theme.css";
+
+/* Custom Utility Classes */
+@import "./utilities.css";
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: var(--leading-normal);
+}
+
+/* ============================================
+   DEFAULT ELEMENT STYLES
+   ============================================ */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  color: var(--foreground);
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-900);
+}
+
+/* ============================================
+   GLOBAL SCROLLBAR
+   ============================================ */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neutral-400) var(--color-neutral-100);
+}
+
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-500);
+}

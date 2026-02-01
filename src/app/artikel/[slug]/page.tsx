@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getArticleBySlug, getAllSlugs, getRelatedArticles } from '@/lib/articles'
-import { BlogDetail } from '@/components/blog/BlogDetail'
+import { ArticleDetail } from '@/components/article/ArticleDetail'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Clock, Home, ArrowLeft } from 'lucide-react'
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function BlogDetailPage({ params }: Props) {
+export default async function ArtikelDetailPage({ params }: Props) {
   const { slug } = await params
   const article = getArticleBySlug(slug)
 
@@ -86,6 +86,17 @@ export default async function BlogDetailPage({ params }: Props) {
                 <span className="text-gray-400">/</span>
               </li>
               <li>
+                <Link
+                  href="/artikel"
+                  className="text-blue-900 hover:text-blue-700 transition-colors"
+                >
+                  Artikel
+                </Link>
+              </li>
+              <li>
+                <span className="text-gray-400">/</span>
+              </li>
+              <li>
                 <span className="text-gray-600">{article.category}</span>
               </li>
               <li>
@@ -103,11 +114,11 @@ export default async function BlogDetailPage({ params }: Props) {
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
-            href="/blog"
+            href="/artikel"
             className="inline-flex items-center gap-2 text-blue-900 hover:text-blue-700 transition-colors text-sm font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
-            Kembali
+            Kembali ke Artikel
           </Link>
         </div>
       </div>
@@ -164,7 +175,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
           {/* Article Body */}
           <div className="p-6 sm:p-8 lg:p-10">
-            <BlogDetail article={article} showHeader={false} />
+            <ArticleDetail article={article} showHeader={false} />
           </div>
         </article>
       </div>
@@ -177,7 +188,7 @@ export default async function BlogDetailPage({ params }: Props) {
             {relatedArticles.map((related) => (
               <Link
                 key={related.id}
-                href={`/blog/${related.slug}`}
+                href={`/artikel/${related.slug}`}
                 className="group block"
               >
                 <article className="bg-white rounded-xl border border-gray-200 hover:border-blue-700 hover:shadow-xl transition-all duration-300 overflow-hidden">

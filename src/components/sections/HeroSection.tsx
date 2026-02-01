@@ -18,7 +18,7 @@ export function HeroSection({ mainArticle, trendingArticles }: HeroSectionProps)
     <section id="beranda" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
         {/* Main Featured Article */}
-        <Link href={`/blog/${mainArticle.slug}`} className="lg:col-span-2 block">
+        <Link href={`/artikel/${mainArticle.slug}`} className="lg:col-span-2 block">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

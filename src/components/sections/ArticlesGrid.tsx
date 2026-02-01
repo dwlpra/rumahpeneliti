@@ -38,7 +38,7 @@ export function ArticlesGrid({ articles }: ArticlesGridProps) {
           transition={{ duration: 0.5 }}
         >
           <Link
-            href="/blog"
+            href="/artikel"
             className="text-blue-900 hover:text-blue-700 font-semibold transition-all hover:translate-x-1 inline-block"
           >
             Lihat Semua →
@@ -50,7 +50,7 @@ export function ArticlesGrid({ articles }: ArticlesGridProps) {
         {articles.map((article, index) => (
           <Link
             key={index}
-            href={`/blog/${article.slug}`}
+            href={`/artikel/${article.slug}`}
             className="block"
           >
             <motion.article

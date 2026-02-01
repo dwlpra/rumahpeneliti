@@ -90,7 +90,7 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
           <span className="hidden sm:inline">Trending Minggu Ini</span>
           <span className="sm:hidden">Trending</span>
         </h2>
-        <Link href="/blog" className="text-xs sm:text-sm text-blue-900 hover:text-blue-700 font-medium">
+        <Link href="/artikel" className="text-xs sm:text-sm text-blue-900 hover:text-blue-700 font-medium">
           Lihat Semua
         </Link>
       </div>
@@ -104,7 +104,7 @@ export function TrendingCarousel({ articles, autoSlideInterval = 4000 }: Trendin
           {articles.map((article, index) => (
             <Link
               key={index}
-              href={article.slug ? `/blog/${article.slug}` : '#'}
+              href={article.slug ? `/artikel/${article.slug}` : '#'}
               className="w-full flex-shrink-0"
             >
               <motion.div
