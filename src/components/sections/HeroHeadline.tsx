@@ -51,7 +51,7 @@ export function HeroHeadline() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 sm:mb-10 px-4"
+            className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 sm:mb-10"
           >
             Rumah Peneliti adalah wadah berbagi pengetahuan, membangun kolaborasi,
             dan mengakselerasi karier riset Anda bersama komunitas peneliti Indonesia.
@@ -62,7 +62,7 @@ export function HeroHeadline() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
           >
             <PrimaryButton
               href="/artikel"
